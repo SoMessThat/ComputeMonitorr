@@ -1,0 +1,56 @@
+body, h1, h3, .h3, h4, h5, html {
+  margin:0;
+  padding:0;
+}
+ul{
+	margin-bottom:0
+}
+/* 头部导航栏 */
+.main-head{
+	top:0;
+	width:100%;
+}
+
+/* 身体 */
+.main-body{
+	/* margin-top:-36px; */
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%
+}
+.main-body-left{
+	padding:0px;
+	height:850px;
+	background-color:#2F4056;
+}
+#tree{
+	color:#fff;
+}
+.main-body-right{
+	padding:20px;
+	height:100%;
+	width:30%
+}
+
+/*与树相关的css*/
+.ztree * {font-size: 10pt;font-family:"Microsoft Yahei",Verdana,Simsun,"Segoe UI Web Light","Segoe UI Light","Segoe UI Web Regular","Segoe UI","Segoe UI Symbol","Helvetica Neue",Arial;color:#fff}
+.ztree li ul{ margin:0; padding:0}
+.ztree li {line-height:30px;}
+.ztree li a {width:100%;height:30px;padding-top: 0px;}
+.ztree li a:hover {text-decoration:none; background-color: #E7E7E7;}
+.ztree li a span.button.switch {visibility:hidden}
+.ztree.showIcon li a span.button.switch {visibility:visible}
+.ztree li a.curSelectedNode {background-color:#D4D4D4;border:0;height:30px;}
+.ztree li span {line-height:30px;}
+.ztree li span.button {margin-top: -7px;}
+.ztree li span.button.switch {width: 16px;height: 16px;}
+
+.ztree li a.level0 span {font-size: 150%;font-weight: bold;}
+.ztree li span.button {background-image:url("../plugin/zTree_v3/img/left_menuForOutLook.png"); *background-image:url("../plugin/zTree_v3/img/left_menuForOutLook.gif")}
+.ztree li span.button.switch.level0 {width:10px; height:20px}
+.ztree li span.button.switch.level1 {width:10px; height:20px}
+.ztree li span.button.noline_open {background-position: 0 0;}
+.ztree li span.button.noline_close {background-position: -18px 0;}
+.ztree li span.button.noline_open.level0 {background-position: 0 -18px;}
+.ztree li span.button.noline_close.level0 {background-position: -18px -18px;}

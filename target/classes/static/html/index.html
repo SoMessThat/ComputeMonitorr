@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>数据共享服务系统</title>
+<base href="../">
+<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!-- <div>
+<h1><span th:text="${token}"></span></h1>
+</div> -->
+<div class="container-fluid">
+    <div class="row">
+        <div class="titleDiv">
+        	<span>
+        		系统
+       		</span>
+       		<p id="computername">computername</p>
+       		<p id="username">username</p>
+       		<p id="osname">osname</p>
+       		<p id="osarch">osarch</p>
+       		<p id="javavendor">javavendor</p>
+       		<p id="javaversion">javaversion</p>
+       		<p id="computerip">computerip</p>
+       		<p id="availableprocessors">JVM可以使用的处理器个数: </p>
+        </div>
+    </div>
+    <div style="margin-top: 50px"></div>
+    <div style="float: left;">
+       <div id="ByDept" style="width:1200px; height: 400px;"></div>
+    </div>
+    <div style="float: left;">
+       <div id="ByProvince" style="width:400px; height: 400px;"></div>
+    </div>
+    <div style="clear: left;"></div>
+    <div style="float: left;">
+       <div id="ByOrigin" style="width:500px; height: 400px;"></div>
+    </div>
+    <div style="float: left;">
+       <div id="BySex" style="width:300px; height: 400px;"></div>
+    </div>
+    <div style="clear: left;"></div>
+</div>
+<script src="../plugs/jquery/jquery-3.3.1.min.js"></script>
+<script src="../plugs/echart/echarts.min.js"></script>
+<script type="text/javascript">
+$.get('http://127.0.0.1:12222/computer/data/getComputerHisData', function (data) {
+	var chartData = [];
+	for (var x in data){
+		var obj = {name: null, value: null };
+		obj.name = data[x].time;
+		obj.value = data[x].cpucombined;
+		chartData.push(obj);
+	}
+// 	console.log(chartData);
+	var myChart = echarts.init(document.getElementById('ByDept'));
+    myChart.setOption(option = {
+        title: {
+            text: 'CPU占用率'
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        xAxis: {
+            data: chartData.map(function (item) {
+            	console.log(item);
+                return item.name;
+            })
+        },
+        yAxis: {
+            splitLine: {
+                show: false
+            }
+        },
+        toolbox: {
+            left: 'center',
+            feature: {
+                dataZoom: {
+                    yAxisIndex: 'none'
+                },
+                restore: {},
+                saveAsImage: {}
+            }
+        },
+        dataZoom: [{
+            startValue: '2019-07-29'
+        }, {
+            type: 'inside'
+        }],
+        visualMap: {
+            top: 10,
+            right: 10,
+            pieces: [{
+                gt: 0,
+                lte: 60,
+                color: '#096'
+            }, {
+                gt: 60,
+                lte: 70,
+                color: '#ffde33'
+            }, {
+                gt: 70,
+                lte: 80,
+                color: '#ff9933'
+            }, {
+                gt: 80,
+                lte: 100,
+                color: '#cc0033'
+            }],
+            outOfRange: {
+                color: '#999'
+            }
+        },
+        series: {
+            name: 'CPU占用率',
+            type: 'line',
+            data: chartData,
+//             	data.map(function (item) {
+//                 return item;
+//             }),
+            markLine: {
+                silent: true,
+                data: [{
+                    yAxis: 60
+                }, {
+                    yAxis: 70
+                }, {
+                    yAxis: 80
+                }, {
+                    yAxis: 100
+                }]
+            }
+        }
+    });
+});
+</script>
+</body>
+</html>

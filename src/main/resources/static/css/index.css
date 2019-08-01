@@ -1,0 +1,154 @@
+@charset "UTF-8";
+body, h1, h3, .h3, h4, h5 {
+  margin:10px;
+  padding:10px;
+}
+.titleDiv{
+    border-width: 0px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 50px;
+    background: inherit;
+    background-color: rgba(10, 35, 66, 1);
+    border: none;
+    padding:5px;
+}
+.titleDiv>span{
+   font-family: '华文细黑 Bold', '华文细黑';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 28px;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-align: left;
+    padding-left:50px;
+}
+.bodyDiv{
+	margin-top:60px;
+}
+
+.menuDiv{
+	padding:20px;
+	width:10%;
+    left:0px;
+    height: 800px;;
+    background: inherit;
+    background-color: rgba(242, 242, 242, 1);
+    border: none;
+    border-radius: 0px;
+}
+.menuDiv>div{
+	
+	padding:10px;
+	text-align:center;
+	font-family: 'Arial Normal', 'Arial';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 13px;
+}
+.menuDiv>div>*{
+	margin:10px
+}
+.menuDiv a>div>.small{
+	width:30px;
+	height:30px;
+    margin: 20px;
+	/*margin-right:20px*/
+}
+.menuDiv>div>.big{
+	width:48px;
+	height:48px;
+}
+.mainDiv{
+    width:90%;
+}
+.mainDiv>div{
+	margin:10px
+}
+.mainDiv>div>table{
+    text-align:center;
+}
+.mainDiv>.row>.col-md-3{
+	text-align:center;
+}
+.mainDiv>.row>.col-md-3 :hover{
+	border-bottom-color:#3399ff;
+	border-bottom-width:2px
+}
+.mainDiv>.row>.row>.col-md-2{
+	padding:10px
+}
+.mainDiv>.row>.row>.col-md-2>.row>.col-md-3{
+	text-align:center
+}
+.tabs{
+    background-color: rgba(242, 242, 242, 1);
+}
+.tab_1{
+	padding:10px;
+}
+.tabs>.tab_1>div{
+	margin:1%;
+	width:23%;
+    background-color: #fff;
+    font-size:20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+	white-space: nowrap;
+}
+.float_right{
+	padding-right:10%;
+	float:right;
+    /*width:50%;*/
+}
+.float_right>*{
+	margin-right:20px;
+}
+
+.float_left{
+    float: left;
+    padding-left:10%;
+}
+
+.number_color{
+    color: #FFBC27;
+}
+
+.search_button{
+    width: 100px;
+}
+
+.warn_color{
+    color:#FFFF00;
+}
+
+.alert_color{
+    color: #FF0000;
+}
+
+.success_color{
+    color: #00CC33;
+}
+
+.date_color{
+    color: #0000FF;
+}
+
+.icon_size{
+    height: 36px;
+}
+
+.font_size{
+    padding: 10px;
+}
+
+div.row.col-md-3{
+    margin: 0px;
+}
+
+.a_icon{
+    text-decoration:none;
+    color:#333;
+}
