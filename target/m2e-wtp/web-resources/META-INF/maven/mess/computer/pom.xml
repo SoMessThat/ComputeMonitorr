@@ -6,7 +6,6 @@
   <artifactId>computer</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
-
   <name>computer</name>
   <url>http://maven.apache.org</url>
 
@@ -17,6 +16,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
   <properties>
+    <failOnMissingWebXml>false</failOnMissingWebXml>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -77,6 +77,13 @@
                     <fork>true</fork>
                 </configuration>
 			</plugin>
+			<plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-war-plugin</artifactId>
+	            <configuration>
+	                <failOnMissingWebXml>false</failOnMissingWebXml>
+	            </configuration>
+	        </plugin>
 		</plugins>
 	</build>
 </project>
