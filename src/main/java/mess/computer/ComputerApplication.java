@@ -25,7 +25,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement // 可选：事务Annotation（等同于xml配置方式的 <tx:annotation-driven />）
 @EnableScheduling   // 1.开启定时任务
 @EnableAsync        // 2.开启多线程
-public class CdSupplyDemandServiceApplication implements CommandLineRunner  {
+public class ComputerApplication implements CommandLineRunner  {
 
 	public void run(String... args) throws Exception {
 		
@@ -35,7 +35,7 @@ public class CdSupplyDemandServiceApplication implements CommandLineRunner  {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		SpringApplication.run(CdSupplyDemandServiceApplication.class, args);
+		SpringApplication.run(ComputerApplication.class, args);
 	}
 
 }
