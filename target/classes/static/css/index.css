@@ -152,3 +152,49 @@ div.row.col-md-3{
     text-decoration:none;
     color:#333;
 }
+body{
+	font-weight: bold;
+}
+span {
+/*     padding-right: 5%; */
+/*     padding-left: 10px; */
+    font-size: 30px;
+    color: #984c4d;
+}
+div.info{
+	margin-left: 5%;
+}
+
+.tip {
+	float: right;
+	font-size: 13px;
+	cursor: pointer;
+	padding-right: 10%;
+}
+
+.echart_pie{
+	width:600px;
+	height: 400px;
+}
+
+.echart_line{
+	width:1050px;
+	height: 400px;
+}
+
+.echart_guaue{
+	width:750px;
+	height: 400px;
+}
+
+.top{
+	margin-top: 30px;
+}
+
+.clear{
+	clear: both;
+}
+
+.graph{
+	float: left;
+}
