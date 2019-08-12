@@ -2,7 +2,6 @@ package mess.computer;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.text.DecimalFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
@@ -77,7 +76,7 @@ public class ComputerStatusScheduled {
 		Runtime r = Runtime.getRuntime();
 		Properties props = System.getProperties();
 		InetAddress addr = InetAddress.getLocalHost();
-		Map<String, String> map = System.getenv();
+//		Map<String, String> map = System.getenv();
 		//用户名:    
 //		tags.put("userName" , map.get("USERNAME"));
 		//计算机名:    
