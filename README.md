@@ -1,51 +1,40 @@
-# computer
-介绍本软件用于查看主机的CPU、内存等使用情况，每5分钟统计一次，数据有效时长1天。
-详细地址：ip:port/html/index.html
-界面展示：
+# 主机监控信息
+版本：**V 1.0.0**  
+介绍：用于查看主机的CPU、内存等使用情况，每5分钟统计一次，数据有效时长1天。
+###详细地址：
+{ip}:{port}/html/index.html
 
+###界面展示：
+![首页](http://www.bemess.xyz:8888/homeController/showCondensedPicture.do?fileId=1b3d2eff-2c25-4bea-9a08-d973c1230d20)  <br> 
+![首页](http://www.bemess.xyz:8888/homeController/showCondensedPicture.do?fileId=e5afeabd-9e42-4c2d-a310-7f141d0e9a77) <br> 
+###安装步骤：
+======
+##### 1.安装JDK<br> 
+自行百度。<br> 
+##### 2.安装influxdb，并启动服务<br> 
+自行百度。<br> 
+##### 3.建表<br> 
 
-安装步骤：
-1.安装JDK
-	简单，百度。
-2.安装influxdb，并启动服务
-	简单，百度。
-3.建表
-	CREATE DATABASE cd_supply_demand
-4.启动jar
+	CREATE DATABASE cd_supply_demand 
+#####4.启动jar<br>
+
+	
 	nohup java -jar computer-0.0.1-SNAPSHOT.jar -start & echo &!
-	nohup java -jar computer-0.0.1-SNAPSHOT.jar --spring.config.location=./application.yml -start & echo &!
+	
+或
+
+	nohup java -jar computer-0.0.1-SNAPSHOT.jar --spring.config.location=./application.yml -start & echo &!<br> 
 
 
-注意事项：
-	需要配置sigar文件,文件在src/main/lib目录下，详情可见 https://blog.csdn.net/yin_jw/article/details/40151547 文章
-	window系统		将下载好的sigar-amd64-winnt.dll拷贝到%JAVA_HOME%\bin目录下（jdk的安装路径下的bin目录）
-	Centos(linux)	将下载好的libsigar-amd64-linux.so 拷贝到/usr/lib64/下面 
-	可解决no libsigar-amd64-linux.so in java.library.path这类问题
+
+## 注意事项：
+
+需要配置sigar文件,文件在src/main/lib目录下，详情可见&nbsp;[Sigar介绍和配置](https://blog.csdn.net/yin_jw/article/details/40151547)。<br> 
+window系统&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; 将下载好的&nbsp; `sigar-amd64-winnt.dll`&nbsp; 拷贝到&nbsp; `%JAVA_HOME%\bin`&nbsp; 目录下（jdk的安装路径下的bin目录）。<br> 
+Centos(linux)&nbsp;&nbsp; &nbsp; &nbsp; 将下载好的&nbsp; `libsigar-amd64-linux.so` &nbsp; 拷贝到&nbsp; `/usr/lib64/`&nbsp; 下面 。<br> 
+可解决&nbsp;&nbsp; &nbsp; &nbsp; <font color="red">no libsigar-amd64-linux.so in java.library.path</font>&nbsp; &nbsp; &nbsp; &nbsp; 这类问题。<br> 
 	
 	
-File								Language				Description							Required
-
-sigar.jar							Java					Java API							Yes	
-log4j.jar							Java					Java logging API					No
-libsigar-x86-linux.so				C						Linux AMD/Intel 32-bit				*
-libsigar-amd64-linux.so				C						Linux AMD/Intel 64-bit				*
-libsigar-ppc-linux.so				C						Linux PowerPC 32-bit				*
-libsigar-ppc64-linux.so				C						Linux PowerPC 64-bit				*
-libsigar-ia64-linux.so				C						Linux Itanium 64-bit				*
-libsigar-s390x-linux.so				C						Linux zSeries 64-bit				*
-sigar-x86-winnt.dll					C						Windows AMD/Intel 32-bit			*
-sigar-amd64-winnt.dll				C						Windows AMD/Intel 64-bit			*
-libsigar-ppc-aix-5.so				C						AIX PowerPC 32-bit					*
-libsigar-ppc64-aix-5.so				C						AIX PowerPC 64-bit					*
-libsigar-pa-hpux-11.sl				C						HP-UX PA-RISC 32-bit				*
-libsigar-ia64-hpux-11.sl			C						HP-UX Itanium 64-bt					*
-libsigar-sparc-solaris.so			C						Solaris Sparc 32-bit				*
-libsigar-sparc64-solaris.so			C						Solaris Sparc 64-bit				*
-libsigar-x86-solaris.so				C						Solaris AMD/Intel 32-bit			*
-libsigar-amd64-solaris.so			C						Solaris AMD/Intel 64-bit			*
-libsigar-universal-macosx.dylib		C						Mac OS X PowerPC/Intel 32-bit		*
-libsigar-universal64-macosx.dylib	C						Mac OS X PowerPC/Intel 64-bit		*
-libsigar-x86-freebsd-5.so			C						FreeBSD 5.x AMD/Intel 32-bit		*
-libsigar-x86-freebsd-6.so			C						FreeBSD 6.x AMD/Intel 64-bit		*
-libsigar-amd64-freebsd-6.so			C						FreeBSD 6.x AMD/Intel 64-bit		*
+####配置文件与系统对应信息
+![配置文件与系统对应信息](http://www.bemess.xyz:8888/homeController/showCondensedPicture.do?fileId=a703295f-0e7b-4e92-9cf1-9d36ab3fa248)
 
