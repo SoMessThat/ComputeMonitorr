@@ -1,0 +1,52 @@
+# Server settings
+server:
+    port: 12222
+    tomcat: 
+        uri-encoding: UTF-8
+
+# SPRING PROFILES
+spring: 
+    application:
+        name: computer
+    datasource: 
+        url: jdbc:mysql://cdb-6usc5wvj.gz.tencentcdb.com:10034/text?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+        username: root
+        password: mess592012
+        driver-class-name: com.mysql.jdbc.Driver
+    http:
+        encoding:
+            charset: UTF-8
+            enabled: true
+            force: true
+    jackson:
+        date-format: yyyy-MM-dd HH:mm:ss
+        time-zone: GMT+8
+        serialization: 
+            write-dates-as-timestamps: false
+    thymeleaf: 
+        cache: false
+        prefix: classpath:/static/html/
+        suffix: .html
+    mvc:
+        view:
+            prefix: /html/
+            suffix: .html
+    influx:
+        url: http://129.204.72.147:8086/
+        user: root
+        password: root
+        database: cd_supply_demand    
+# Management
+management:
+    security:
+        enabled: false
+
+logging:
+    level:
+        ROOT: info
+        org.springframework.web: ERROR
+        com.ibatis: debug
+        com.cetccity: info
+    pattern: 
+        console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+        file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"

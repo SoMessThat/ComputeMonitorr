@@ -140,7 +140,7 @@ function initDialog(chartXAxis_1, chartYAxis_1, chartYAxis_2, name) {
 	}
 })();
 
-$.get('http://127.0.0.1:12222/computer/data/getComputerHisData', function (data) {
+$.get('http://www.bemess.xyz:12222/computer/data/getComputerHisData', function (data) {
 	$('#computername').text(data[0].computername);
 	$('#username').text(data[0].username);
 	$('#osname').text(data[0].osname);

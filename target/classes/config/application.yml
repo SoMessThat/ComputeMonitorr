@@ -9,9 +9,9 @@ spring:
     application:
         name: computer
     datasource: 
-        url: jdbc:mysql://127.0.0.1:3306/cm?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+        url: jdbc:mysql://cdb-6usc5wvj.gz.tencentcdb.com:10034/text?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
         username: root
-        password: 592012
+        password: mess592012
         driver-class-name: com.mysql.jdbc.Driver
     http:
         encoding:
@@ -32,7 +32,7 @@ spring:
             prefix: /html/
             suffix: .html
     influx:
-        url: http://127.0.0.1:8086/
+        url: http://129.204.72.147:8086/
         user: root
         password: root
         database: cd_supply_demand    

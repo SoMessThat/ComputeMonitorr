@@ -55,6 +55,7 @@ public class InfluxDBConnectionUtil {
 
 	public InfluxDBConnectionUtil(String username, String password, String url, String database,
 			String retentionPolicy) {
+//		System.out.println("url" + url);
 		this.username = username;
 		this.password = password;
 		this.url = url;
@@ -63,7 +64,7 @@ public class InfluxDBConnectionUtil {
 	}
 
 	public InfluxDBConnectionUtil() {
-		System.err.println(url);
+//		System.out.println("url" + url);
 		this.retentionPolicy = "default";
     }
 	

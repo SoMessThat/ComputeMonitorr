@@ -39,7 +39,7 @@ public class ComputerStatusScheduled {
 	@Scheduled(cron = "0 0/5 * * * ?")
 //	@Scheduled(cron = "0/5 * * * * ? ")
 	public void run() {
-		System.err.println("执行静态定时任务时间: " + new Date());
+//		System.err.println("执行静态定时任务时间: " + new Date());
 		try {
 			//System信息，从jvm获取
 			property();
@@ -66,9 +66,10 @@ public class ComputerStatusScheduled {
 		} catch (Exception e) {
 
 		}
-
 		influxDB.influxDbBuild();
 		influxDB.createDefaultRetentionPolicy();
+//		System.out.println(tags);
+//		System.out.println(fields);
 		influxDB.insert(measurement, tags, fields, 0, null);
 	}
 
@@ -78,11 +79,11 @@ public class ComputerStatusScheduled {
 		InetAddress addr = InetAddress.getLocalHost();
 		Map<String, String> map = System.getenv();
 		//用户名:    
-		tags.put("userName" , map.get("USERNAME"));
+//		tags.put("userName" , map.get("USERNAME"));
 		//计算机名:    
-		tags.put("computerName" , map.get("COMPUTERNAME"));
+//		tags.put("computerName" , map.get("COMPUTERNAME"));
 		//计算机域名:    
-		tags.put("computerDomain" , map.get("USERDOMAIN"));
+//		tags.put("computerDomain" , map.get("USERDOMAIN"));
 		//本地ip地址:    
 		tags.put("computerIp" , addr.getHostAddress());
 		//本地主机名:    
@@ -152,6 +153,8 @@ public class ComputerStatusScheduled {
 	}
 
 	private static void memory() throws SigarException {
+//		String road = System.getProperty("user.dir");
+//		System.load(road + "/libsigar-amd64-linux.so");
 		Sigar sigar = new Sigar();
 
 		Mem mem = sigar.getMem();

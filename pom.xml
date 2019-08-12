@@ -22,7 +22,12 @@
 	</properties>
 
 	<dependencies>
-		<!-- 上边引入 parent，因此 下边无需指定版本 -->
+		<!-- sigar -->
+	<dependency>
+		<groupId>org.hyperic</groupId>
+	    <artifactId>sigar</artifactId>
+	    <version>1.6.4</version>
+	</dependency>
 		<!-- 包含 mvc,aop 等jar资源 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -67,8 +72,8 @@
 			<artifactId>influxdb-java</artifactId>
 		</dependency>
 	</dependencies>
-
 	<build>
+		<defaultGoal>compile</defaultGoal>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -79,13 +84,9 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-					<mainClass>mess.computer.ComputerApplication</mainClass>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
-			</plugin>
+		      <groupId>org.apache.maven.plugins</groupId>
+		      <artifactId>maven-jar-plugin</artifactId>
+		    </plugin>
 		</plugins>
 	</build>
 </project>
