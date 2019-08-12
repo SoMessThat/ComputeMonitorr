@@ -1,10 +1,10 @@
-# 主机监控信息
-版本：**V 1.0.0**  
-介绍：用于查看主机的CPU、内存等使用情况，每5分钟统计一次，数据有效时长1天。
-###详细地址：
+# 主机监控信息<br>
+版本：**V 1.0.0**  <br>
+介绍：用于查看主机的CPU、内存等使用情况，每5分钟统计一次，数据有效时长1天。<br>
+###详细地址：<br>
 {ip}:{port}/html/index.html
 
-###界面展示：
+###界面展示：<br>
 ![首页](http://www.bemess.xyz:8888/homeController/showCondensedPicture.do?fileId=1b3d2eff-2c25-4bea-9a08-d973c1230d20)  <br> 
 ![首页](http://www.bemess.xyz:8888/homeController/showCondensedPicture.do?fileId=e5afeabd-9e42-4c2d-a310-7f141d0e9a77) <br> 
 ###安装步骤：
