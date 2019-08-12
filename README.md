@@ -13,7 +13,7 @@
 自行百度。<br> 
 ##### 2.安装influxdb，并启动服务<br> 
 自行百度。<br> 
-##### 3.建表<br> 
+##### 3.建库<br> 
 
 	CREATE DATABASE cd_supply_demand 
 #####4.启动jar<br>
