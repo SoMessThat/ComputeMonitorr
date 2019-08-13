@@ -6,10 +6,9 @@
 {ip}:{port}/html/index.html
 
 ###界面展示：<br>
-![首页](http://www.bemess.xyz:8888/homeController/showCondensedPicture.do?fileId=1b3d2eff-2c25-4bea-9a08-d973c1230d20)  <br> 
-![详细信息](http://www.bemess.xyz:8888/homeController/showCondensedPicture.do?fileId=e5afeabd-9e42-4c2d-a310-7f141d0e9a77) <br> 
+![首页](http://www.bemess.xyz:8765/7105_017774.png)  <br> 
+![详细信息](http://www.bemess.xyz:8765/dfa7_024134.png) <br> 
 ###安装步骤：
-======
 ##### 1.安装JDK<br> 
 自行百度。<br> 
 ##### 2.安装influxdb，并启动服务<br> 
@@ -36,6 +35,6 @@ Centos(linux)&nbsp;&nbsp; &nbsp; &nbsp; 将下载好的&nbsp; `libsigar-amd64-li
 可解决&nbsp;&nbsp; &nbsp; &nbsp; <font color="red">no libsigar-amd64-linux.so in java.library.path</font>&nbsp; &nbsp; &nbsp; &nbsp; 这类问题。<br> 
 	
 	
-####配置文件与系统对应信息
-![配置文件与系统对应信息](http://www.bemess.xyz:8888/homeController/showCondensedPicture.do?fileId=a703295f-0e7b-4e92-9cf1-9d36ab3fa248)
+####配置文件与系统对应信息<br> 
+![配置文件与系统对应信息](http://www.bemess.xyz:8765/3ec7_957904.png)
 
