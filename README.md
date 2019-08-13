@@ -3,8 +3,8 @@
 介绍：用于查看主机的CPU、内存等使用情况，每5分钟统计一次，数据有效时长1天。<br>
 安装包位置:主目录/target/<br>
 ###详细地址：<br>
-{ip}:{port}/html/index.html
-
+{ip}:{port}/html/index.html<br>
+&nbsp;&nbsp;[事例请点击这里](http://www.bemess.xyz:12345/html/index.html)<br>
 ###界面展示：<br>
 ![首页](http://www.bemess.xyz:8765/7105_017774.png)  <br> 
 ![详细信息](http://www.bemess.xyz:8765/dfa7_024134.png) <br> 
@@ -23,7 +23,7 @@
 	
 或
 
-	nohup java -jar computer-0.0.1-SNAPSHOT.jar --spring.config.location=./application.yml -start & echo &!<br> 
+	nohup java -jar computer-0.0.1-SNAPSHOT.jar --spring.config.location=./application.yml -start & echo &! 
 
 
 
