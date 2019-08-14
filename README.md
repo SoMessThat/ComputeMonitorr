@@ -6,8 +6,8 @@
 {ip}:{port}/html/index.html<br>
 &nbsp;&nbsp;[事例请点击这里](http://www.bemess.xyz:12345/html/index.html)<br>
 ###界面展示：<br>
-![首页](http://www.bemess.xyz:8765/7105_017774.png)<br> 
-![详细信息](http://www.bemess.xyz:8765/dfa7_024134.png)<br> 
+![首页](http://www.bemess.xyz:8765/7105_017774.png)
+![详细信息](http://www.bemess.xyz:8765/dfa7_024134.png)
 ###安装步骤：
 ##### 1.安装JDK<br> 
 自行百度。<br> 
