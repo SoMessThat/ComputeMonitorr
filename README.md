@@ -4,7 +4,7 @@
 安装包位置:主目录/target/<br>
 ###详细地址：<br>
 {ip}:{port}/html/index.html<br>
-&nbsp;&nbsp;[事例请点击这里](http://www.bemess.xyz:12345/html/index.html)<br>
+&nbsp;&nbsp;[事例请点击这里](http://www.somessthat.xyz:12345/html/index.html)<br>
 ###界面展示：<br>
 ![首页](http://www.bemess.xyz:8765/7105_017774.png)
 ![详细信息](http://www.bemess.xyz:8765/dfa7_024134.png)
